@@ -1,0 +1,43 @@
+.signUp{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100vh;
+  }
+  .signUp_Details {
+    text-align: left;
+    padding: 10%;
+  }
+
+  .signUpDetails input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding-left: 30px;
+    margin-bottom: 32px;
+    margin-top: 20px;
+    width: 92%;
+  }
+  .appName{
+    position: absolute;
+    margin-top: 25%;
+    margin-left: 15%;
+    background-color: var(--frame-background);
+    line-height: 25px; 
+    width: 300px;
+    text-align: center;
+ }
+  .signUp_Details p{
+    font-size: 16px;
+    font-weight: 400;
+  }
+  img{
+    width: 50vw;
+    height: 100vh;
+  }
+  .logo{
+    opacity: 1; 
+    transition: none; 
+    text-decoration: underline; 
+  }
+
+  

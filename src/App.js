@@ -1,23 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import amalitech from './amalitechFlag.jpg'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="signIn">
+      <div className='signIn_details'>
+        <header>
+          <h3>Welcome back</h3>
+          <p>Please enter your details</p>
+        </header>
+        <div className='loginDetails'>
+          <label>Email</label><br></br>
+          <input placeholder='johndoe@jnkmail.com'></input><br></br>
+          <label>Password</label><br></br>
+          <input placeholder='● ● ● ● ● ● ●'></input>
+          <p>Forgot <span>password?</span></p>
+        </div>
+        <button className='sign_in'>Sign in</button>
+        <div className='signupOption'>
+        <p>Don't have an account? <span>Sign up</span><br></br><p>or sign in with:</p><br></br><i className='facebook_icon'>❤️</i><i className='google_icon'>🌘</i></p>
+        </div>
+      </div>
+      <div className='imageContainer'>
+        <img className='amalitech'src={amalitech}/>
+      </div>
     </div>
   );
 }

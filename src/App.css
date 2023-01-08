@@ -1,38 +1,71 @@
-.App {
+:root {
+  --orange: #FF6C2D;
+  --army: #145364;
+  --green:#2FE900;;
+  --facebook: #1877F2;
+  --frame-background: #F6F6F6;
+}
+img{
+  width: 50vw;
+  height: 100vh;
+}
+.imageContainer{
+  height: 100vh;
+}
+.signIn_details {
+  text-align: left;
+  margin: 10%;
+}
+.signIn_details h3{
+  font-weight: 700px;
+  font-size: 37px;
+  color: var(--orange)
+
+}
+.signIn_details input{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding-left: 30px;
+  margin-bottom: 32px;
+  width: 92%;
+
+}
+
+.signIn_details p{
+  font-size: 16px;
+  font-weight: 400;
+}
+header{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+.signIn{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  background: var(--orange);
+  border: none;
+  height: 40px;
+  width: 100%;
+  font-size: 20px;
+  color: aliceblue;
+  box-shadow: 4.800143241882324px 8.800263404846191px 10.400311470031738px -8.800263404846191px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.signupOption{
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+ span{
+  color: var(--orange);
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
