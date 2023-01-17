@@ -1,4 +1,6 @@
-.signUp{
+ @import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300&display=swap'); 
+@import url("https://fonts.google.com/icons?selected=Material%20Icons%20Outlined%3Asettings%3A");
+ .signUp{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     height: 100vh;
@@ -40,4 +42,94 @@
     text-decoration: underline; 
   }
 
-  
+  /* .container{
+    padding:20px;
+  } */
+  .lines{
+    width: 23px;
+    height: 15px;
+    position: relative;
+    border:5px solid #FF6C2D;
+    border-top-left-radius: 5px;  
+    border-top-right-radius: 5px;  
+    border-bottom-left-radius:5px ;  
+    border-bottom-right-radius:5px ;  
+    border-right: none;
+    border-left: none;
+
+  }
+.lines::after{
+    content:"";
+    position: absolute;
+    margin: auto;
+    height: 5px;
+    background-color: #FF6C2D;
+    width:99%;
+    top:30%;
+    border-radius: 40px;
+
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-family:'Figtree';
+    letter-spacing: 20px;
+    color: rgba(174, 174, 174, 1)
+}
+.tag{
+    font-size: 18px;
+    font-weight: 300;
+    font-family:'Figtree';
+    color: white;
+    height: 22;
+    letter-spacing: 10px;
+    width: 370px;
+    text-align: center;
+    background-color: var(--orange);
+}
+.container{
+    margin-right:20px;
+}
+.info{
+    margin: auto;
+    width: 400px;
+}
+.resetTab{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+}
+.logoContainer{
+    margin-left: 3%;
+}
+.note{
+    margin: 30px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+}
+
+.info input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding-left: 30px;
+    margin-bottom: 32px;
+    margin-top: 20px;
+    font-size: 16px;
+    width: 92%;
+  }
+
+.gear{
+    border: 2px solid red;
+    color:#FF6C2D;
+    width: 550px;
+    height: 600px;
+    position: absolute;
+    top: -25.36%;
+    left:-20.61%;
+
+}

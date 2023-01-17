@@ -5,11 +5,12 @@ import App from './App';
 import Signup from './Signup';
 import Reset from './Reset';
 import reportWebVitals from './reportWebVitals';
+import ResetPass from './ResetPass';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Reset />
+    <App />
   </React.StrictMode>
 );
 

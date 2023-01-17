@@ -1,6 +1,8 @@
 import './signup.css';
 import React from 'react'
 import amalitech from './amalitechFlag.jpg'
+import { FcGoogle } from 'react-icons/fc';
+import { FaFacebook } from 'react-icons/fa';
 
 function Signup() {
  return (
@@ -20,7 +22,7 @@ function Signup() {
             </div>
                <button className='sign_up'>Sign up</button>
             <div className='signupOption'>
-                <p>Already have an account? <span>Sign in</span><br/><p>or sign up with:</p><br/><i className='facebook_icon'>❤️</i><i className='google_icon'>🌘</i></p>
+                <p>Already have an account? <span>Sign in</span><br/><p>or sign up with:</p><br/><FcGoogle className='icon'/><FaFacebook className='icon faceBook'/></p>
             </div>
         </div>
     </div> 
