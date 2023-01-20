@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300&display=swap'); 
+@import url("https://fonts.google.com/icons?selected=Material%20Icons%20Outlined%3Asettings%3A");
+*{
+    margin: 0%;
+    padding: 0%;
+    background-color: var(--frame-background);
+}
+
+
+.head{
+    width: 100vw;
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.container{
+    display: flex;
+    border: 2px solid red;
+}
+
+.logoContainer{
+    height: 60px;
+    width: 20%;
+}
+
+img{
+    width: 100%;
+    height: inherit;
+    
+}
+.more ul{
+    list-style: none;
+   
+
+}
+.more li{
+    display: inline-grid;
+    margin-right: 60px;
+    font-size: 17px;
+
+}
+
+.more{
+    border: 1px solid green;
+    margin-left: 160px;
+}
+
+.language{
+display: inline;
+margin-left: 223px;
+width: 422;
+}
+button{
+    width: 66px;
+    font-size: 16px;
+
+}
+.globe{
+    color: var(--orange);
+    font-size: 20px;
+}
+.homePage{
+    border: 1px solid rgb(9, 0, 0);
+    display: grid;
+    place-items: center;
+}
+.backImg{
+    position: absolute;
+width: 1932.57px;
+height: 331.16px;
+left:0px;
+top: 85px;
+background:  #7B7B7B;
+border-radius:0px 0px 30px 40px ;
+}
+.exchange{
+    width: 1176px;
+    height: 381px;
+    background-color: rgba(255,108,45,0.6);
+    backdrop-filter: blur(5px);
+    display: grid;
+    place-items: center;
+    border: 2px solid rgb(71, 176, 26);
+    margin-bottom: 32px;
+    border-radius: 10px;
+}
+
+
+.exchangeDetails{
+    margin: 32px 41px 74px 73px;
+    border: 2px solid red;
+}
+
+.exchangeTitle h3{
+    background-color: rgba(255,108,45,0.6);
+    backdrop-filter: blur(5px);
+    font-size: 36px;    
+    color: #ffff;
+}
+.exchangeTitle h5{
+    background-color: rgba(255,108,45,0.6);
+    backdrop-filter: blur(5px);
+    font-size: 24px;
+    color: #ffff;
+}
+.exchangeTitle p{
+    background-color: rgba(255,108,45,0.6);
+    backdrop-filter: blur(5px);
+}
+.exchangeInput {
+    backdrop-filter: blur(5px);
+    background-color: rgba(255,108,45,0.6);
+    
+}
+.calender p{
+    background-color: rgba(241, 154, 117, 0);
+}
+.calender{
+    background-color: rgba(255,108,45,0.6);
+    backdrop-filter: blur(5px);
+}
+
+.ratelist{
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2,1fr);
+}
+.rateTo{
+    border: 1px solid rgb(19, 192, 74);
+    width: 560px;
+    height: 524px;
+    margin-left: 24px;
+    border-radius: 10px;
+    background-color: #ffff;
+}
+.rateFrom{
+    width: 560px;
+    height: 524px;
+    border: 1px solid rgb(29, 153, 5);
+    margin-right: 24px;
+    border-radius: 10px;
+    background-color: #ffff;
+}
+.from,.to{
+    width: 456px;
+    height: 81px;
+    border-radius: 10px;
+    font-size: 32px;
+}
+.date{
+    width: 369px;
+    height: 52px;
+    border-radius: 10px;
+}
