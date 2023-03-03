@@ -1,5 +1,5 @@
 import './App.css';
-import amalitech from './amalitechFlag.jpg'
+import color from './color.png'
 import { FcGoogle } from 'react-icons/fc';
 import { FaFacebook } from 'react-icons/fa';
 
@@ -12,19 +12,23 @@ function App() {
           <p>Please enter your details</p>
         </header>
         <div className='loginDetails'>
-          <label>Email</label><br></br>
-          <input placeholder='johndoe@jnkmail.com'></input><br></br>
-          <label>Password</label><br></br>
-          <input placeholder='● ● ● ● ● ● ●'></input>
+          <label className='labels'>Email</label>
+          <input placeholder='johndoe@jnkmail.com'></input>
+          <label className='labels'>Password</label>
+          <input type='password'placeholder='● ● ● ● ● ● ●'></input>
           <p>Forgot <span>password?</span></p>
         </div>
         <button className='sign_in'>Sign in</button>
         <div className='signupOption'>
-        <p>Don't have an account? <span>Sign up</span><br></br><p>or sign in with:</p><br></br><FcGoogle className='icon'/><FaFacebook className='icon faceBook'/></p>
+        <p>Don't have an account? <span>Sign up</span><br/><br/><p>or sign in with:</p><br></br><FcGoogle className='icon'/><FaFacebook className='icon faceBook'/></p>
         </div>
       </div>
       <div className='imageContainer'>
-        <img className='amalitech'src={amalitech}/>
+        <img className='amalitech'src={color}/>
+        <div className='logoSign'>
+                <label className='logoname'>AMALIT<div className='signupLogo'></div>CH</label>
+                <p className='logotext'>Currency Converter</p>
+        </div>
       </div>
     </div>
   );

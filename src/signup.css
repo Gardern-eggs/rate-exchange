@@ -5,18 +5,77 @@
     grid-template-columns: repeat(2, 1fr);
     height: 100vh;
   }
+  .signupLogo{
+    width: 23px;
+    height: 18px;
+    position: relative;
+    margin-top: 22px;
+    border:5px solid #FF6C2D;
+    border-right: none;
+    border-left: none;
+    border-top-left-radius:3px ;  
+    border-top-right-radius:3px;
+    border-bottom-left-radius:3px ;
+    border-bottom-right-radius:3px ;
+    margin-left: -15px;
+
+  }
+  
+  .signupLogo::after{
+    content:"";
+    position: absolute;
+    height: 4.5px;
+    background-color: #FF6C2D;
+    width:99%;
+    top:33%;
+    border-radius: 40px;
+  }
+
+
+  .loginDetails{
+    margin-top: 64px;
+  }
+  .logoSign{
+    position:absolute;
+    width: 450px;
+    top: 45vh;
+    margin-left: 12vw;
+    display: grid;
+    place-items: center;
+    place-content: center;
+}
+
+    .logoname{
+      letter-spacing: 1.5rem;
+      font-size: 50px;
+      color: aliceblue;
+      margin-left: 20px;
+      font-weight: 100;
+    }
+
+
+
   .signUp_Details {
     text-align: left;
     padding: 10%;
   }
-
-  .signUpDetails input{
+.labels{
+  display: flex;
+  font-size: 27px;
+  margin-bottom: 7px;
+  letter-spacing: normal;
+  color:rgb(11, 11, 11);
+  font-size: 18px;
+}
+ 
+.signUpDetails input{
     border-top: none;
     border-left: none;
     border-right: none;
     padding-left: 30px;
-    margin-bottom: 32px;
-    margin-top: 20px;
+    margin-bottom: 22px;
+    height: 50px;
+    margin-top: 10px;
     width: 92%;
   }
   .appName{
@@ -42,34 +101,15 @@
     text-decoration: underline; 
   }
 
-  /* .container{
-    padding:20px;
-  } */
-  .lines{
-    width: 23px;
-    height: 15px;
-    position: relative;
-    border:5px solid #FF6C2D;
-    border-top-left-radius: 5px;  
-    border-top-right-radius: 5px;  
-    border-bottom-left-radius:5px ;  
-    border-bottom-right-radius:5px ;  
-    border-right: none;
-    border-left: none;
-
+  .sign_up{
+    width: 92%;
+    margin-left: 10px;
+    margin-bottom: 54px;
   }
-.lines::after{
-    content:"";
-    position: absolute;
-    margin: auto;
-    height: 5px;
-    background-color: #FF6C2D;
-    width:99%;
-    top:30%;
-    border-radius: 40px;
-
+.signUpDetails input{
+font-size:17px;
+/* height: 30px; */
 }
-
 .title{
     display: flex;
     align-items: center;
@@ -103,6 +143,13 @@
 }
 .logoContainer{
     margin-left: 3%;
+}
+.logotext{
+  color: black;
+  width: 425px;
+  font-size: 30px;
+  letter-spacing: .4rem;
+  background-color: var(--frame-background);
 }
 .note{
     margin: 30px;

@@ -1,14 +1,15 @@
 :root {
   --orange: #FF6C2D;
-  --army: #145364;
+  --army: rgba(20, 83, 100, 1);
+
   --green:#2FE900;;
   --facebook: #1877F2;
   --frame-background: #F6F6F6;
 }
-img{
+
+/* img{
   width: 50vw;
-  height: 100vh;
-}
+} */
 .imageContainer{
   height: 100vh;
 }
@@ -28,6 +29,7 @@ img{
   border-right: none;
   padding-left: 30px;
   margin-bottom: 32px;
+  height: 30px;
   width: 92%;
 
 }
@@ -39,7 +41,83 @@ img{
 header{
   text-align: center;
 }
+.logoAbsolute{
+position:absolute;
+top: 50vh;
+margin-left: 20vw;
+width: 312px;
+}
 
+.loginDetails input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding-left: 30px;
+    margin-bottom: 22px;
+    font-size: 17px;
+    height: 50px;
+    margin-top: 10px;
+    width: 92%;
+  }
+
+/* .labels{
+  display: flex;
+  font-size: 27px;
+  margin-bottom: 24px;
+  letter-spacing: normal;
+  color:rgb(11, 11, 11);
+  font-size: 18px;
+} */
+.labels{
+  display: flex;
+  font-size: 27px;
+  margin-bottom: 7px;
+  letter-spacing: normal;
+  color:rgb(11, 11, 11);
+  font-size: 18px;
+}
+.logomake{
+  padding-left: 170px;
+  margin-top: 33px;
+}
+
+.logotext {
+  background-color: #FF6C2D;
+  color: rgb(17, 6, 6);
+  width: 207px;
+  font-size: 13px;
+  letter-spacing: .3rem;
+  display: grid;
+  place-items: center;
+}
+
+.eDesign{
+  width: 23px;
+  height: 15px;
+  position: relative;
+  margin-top: 8px;
+  border:5px solid #FF6C2D;
+  border-right: none;
+  border-left: none;
+  border-top-left-radius:3px ;  
+  border-top-right-radius:3px;
+  border-bottom-left-radius:3px ;
+  border-bottom-right-radius:3px ;
+}
+
+.eDesign::after{
+  content:"";
+  position: absolute;
+  /* margin: auto; */
+  height: 4.5px;
+  background-color: #FF6C2D;
+  width:99%;
+  top:33%;
+  border-radius: 40px;
+}
+.loginDetails{
+  margin-top: 64px;
+}
 
 
 .signIn{
@@ -52,13 +130,19 @@ button {
   background: var(--orange);
   border: none;
   height: 40px;
-  width: 100%;
+  width: 359px;
   font-size: 20px;
   color: aliceblue;
   box-shadow: 4.800143241882324px 8.800263404846191px 10.400311470031738px -8.800263404846191px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
+  margin-top: 23px;
 }
 
+ .sign_in {
+  width: 92%;
+  margin-left: 10px;
+  margin-bottom: 54px;
+}
 .signupOption{
   text-align: center;
 }
@@ -76,4 +160,3 @@ margin-right: 5px;
  .faceBook{
  color: #1877F2;
 }
-

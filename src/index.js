@@ -1,17 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
-import Signup from './Signup';
-import Reset from './Reset';
+import index from './index.css'
 import Rate from './Rate';
+import Signup from './Signup';
 import reportWebVitals from './reportWebVitals';
 import ResetPass from './ResetPass';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Rate />
+    <ResetPass/>
   </React.StrictMode>
 );
 

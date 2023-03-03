@@ -1,6 +1,7 @@
 import React from 'react'
 import { BsGear } from 'react-icons/bs';
 
+
 function ResetPass() {
   return (
     <div>
@@ -9,12 +10,8 @@ function ResetPass() {
             <BsGear className='gear'/>
             <div className='info'>
                 <div className='logoContainer'>
-                    <label className='title'>AMALITE
-                        <div className='container'>
-                            <div className='lines'></div>
-                        </div>CH
-                    </label>
-                    <div className='tag'>Currency Converter</div>
+                        <label>AMALIT<div className='eDesign'></div>CH</label>
+                        <p className='logotexts'>Currency Converter</p>
                 </div>
                 <p className='note'>Please check your email.</p>
             </div>

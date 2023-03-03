@@ -8,12 +8,8 @@ function Reset() {
             <BsGear className='gear'/>
       <div className='info'>
               <div className='logoContainer'>
-                  <label className='title'>AMALITE
-                      <div className='container'>
-                          <div className='lines'></div>
-                      </div>CH
-                  </label>
-                  <div className='tag'>Currency Converter</div>
+                   <label>AMALIT<div className='eDesign'></div>CH</label>
+                   <p className='logotexts'>Currency Converter</p>
               </div>
               <p className='note'>We can help you reset your password using the
                   email address associated with your account.</p>
