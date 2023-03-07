@@ -1,22 +1,24 @@
 import React from 'react'
-import './signup.css';
+import './index.css';
 import { BsGear } from 'react-icons/bs';
-
+import { Link } from 'react-router-dom';
 function Reset() {
   return (
     <div className='resetTab'>
             <BsGear className='gear'/>
       <div className='info'>
-              <div className='logoContainer'>
-                   <label>AMALIT<div className='eDesign'></div>CH</label>
-                   <p className='logotexts'>Currency Converter</p>
-              </div>
+            <div className='logoContainerPass'>
+            <Link to='/' className='link'>
+                    <label>AMALIT<div className='Design'></div>CH</label>
+                    <p className='logotexta'>Currency Converter</p>
+            </Link>
+            </div>
               <p className='note'>We can help you reset your password using the
                   email address associated with your account.</p>
-              <label>Email</label><br />
-              <input type="text" placeholder='johndoe@jnkmail.com'></input><br />
-              <button className='resetbtn'>Reset Password</button>
-          </div>
+              <p className='name'>Email</p>
+              <input classname='emailHold' type="text" placeholder='johndoe@jnkmail.com'></input>
+           <Link to='/ResetPass' className='link'>  <button className='resetbtn2'>Reset Password</button> </Link>
+        </div>
     </div>
   
     

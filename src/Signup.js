@@ -1,5 +1,6 @@
 import './signup.css';
 import React from 'react'
+import { Link } from 'react-router-dom';
 import color from './color.png'
 import { FcGoogle } from 'react-icons/fc';
 import { FaFacebook } from 'react-icons/fa';
@@ -10,8 +11,10 @@ function Signup() {
         <div className='imageContainer'>
             <img className='amalitech'src={color}/>
             <div className='logoSign'>
+            <Link to='/' className='link'>
                 <label className='logoname'>AMALIT<div className='signupLogo'></div>CH</label>
                 <p className='logotext'>Currency Converter</p>
+            </Link>
             </div>
         </div>
         <div className='signUp_Details'>
@@ -22,11 +25,11 @@ function Signup() {
                 <input type="text" placeholder='johndoe@jnkmail.com'></input><br/>
                 <label className='labels'>Password</label><br/>
                 <input placeholder='● ● ● ● ● ● ●'></input>
-                <p>Forgot <span>password?</span></p>
+                <p>Forgot <Link to='/Reset' className='link'> <span>password?</span> </Link></p>
             </div>
-               <button className='sign_up'>Sign up</button>
+            <Link to='/' className='link'>  <button className='sign_up'>Sign up</button></Link>
             <div className='signupOption'>
-                <p>Already have an account? <span>Sign in</span><br/><p>or sign up with:</p><br/><FcGoogle className='icon'/><FaFacebook className='icon faceBook'/></p>
+                <p>Already have an account? <Link to='/App' className='link'><span>Sign in</span></Link><br/><p>or sign up with:</p><br/><FcGoogle className='icon'/><FaFacebook className='icon faceBook'/></p>
             </div>
         </div>
     </div> 

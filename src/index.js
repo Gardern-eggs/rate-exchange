@@ -1,16 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
-import index from './index.css'
-import Rate from './Rate';
-import Signup from './Signup';
+// import App from './App';
+//  import index from './index.css'
+//  import Signup from './Signup';
 import reportWebVitals from './reportWebVitals';
-import ResetPass from './ResetPass';
+//  import Reset from './Reset';
+// import Rate from './Rate';
+import Roots from './Root';
+// import ResetPass from './ResetPass';
+// import Search from './Search';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ResetPass/>
+    <Roots />
   </React.StrictMode>
 );
 

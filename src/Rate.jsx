@@ -1,15 +1,13 @@
 import React,{useState} from 'react'
-import './index.css';
-// import { Link } from 'react-route';
+import { Link} from 'react-router-dom';
 import {BsGlobe} from 'react-icons/bs'
 import './Rate.css'
 import { FaFacebook ,FaTwitter } from 'react-icons/fa';
 import color from './color.png'
 import RateCalculate from './RateCalculate'
 import RateDeploy from './RateDeploy'
-import App from './App';
 import Signup from './Signup';
-import Reset from './Reset';
+
 
 function Rate() {
     const [date, setDate] = useState ();
@@ -19,9 +17,11 @@ function Rate() {
     <>
     {/* header component */}
         <div className='head'>
-                <div className='logoContainer'>
+                <div className='RatelogoContainer'>
+                <Link to='/' className='link'>
                         <label>AMALIT<div className='eDesign'></div>CH</label>
                         <p className='logotexts'>Currency Converter</p>
+                </Link>
                 </div>
                 <div className='more'>
                     <ul>
@@ -31,13 +31,15 @@ function Rate() {
                     </ul>
                 </div>   
                 <div className='language'>
-                    <div className='signs'>Sign in</div> 
-                         <button >Register</button>  
-                    <div className='signs'><BsGlobe className='globe'/> EN</div> 
+                    <Link to='App' className='link'>  <div className='sign'>Sign in</div></Link> 
+                      <Link to='/SignUp' className='link'>
+                        <button className='btnRegister'>Register</button>
+                      </Link> 
+                    <div className='sign'><BsGlobe className='globe'/> EN</div> 
                 </div>
         </div>
     {/*end of header  */}
-ju        <div className='homePage'>
+        <div className='homePage'>
             <img  className='backImg' src={color}/>
 
             <div className='exchange' >
@@ -137,8 +139,11 @@ ju        <div className='homePage'>
             <div className='foot'>
                 {/* <div className='footHolder'> */}
                     <div className='logomake'>
+                    <Link to='/' className='link'>
+
                         <label>AMALIT<div className='eDesign'></div>CH</label>
                         <p className='logotexts'>Currency Converter</p>
+                    </Link>
                     </div>
                     <div className='footSpace'>
                         <div className='toolsTab'>

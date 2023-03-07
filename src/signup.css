@@ -1,16 +1,28 @@
  @import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300&display=swap'); 
 @import url("https://fonts.google.com/icons?selected=Material%20Icons%20Outlined%3Asettings%3A");
- .signUp{
+:root {
+  --orange: #FF6C2D;
+  --army: rgba(20, 83, 100, 1);
+
+  --green:#2FE900;;
+  --facebook: #1877F2;
+  --frame-background: #F6F6F6;
+}
+*{
+  margin: 0px;
+} 
+.signUp{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    height: 100vh;
+    height: 100%;
   }
   .signupLogo{
     width: 23px;
     height: 18px;
     position: relative;
-    margin-top: 22px;
-    border:5px solid #FF6C2D;
+    margin-top: 16px;
+    margin-right: 2px;
+    border:6px solid #FF6C2D;
     border-right: none;
     border-left: none;
     border-top-left-radius:3px ;  
@@ -24,7 +36,7 @@
   .signupLogo::after{
     content:"";
     position: absolute;
-    height: 4.5px;
+    height: 5px;
     background-color: #FF6C2D;
     width:99%;
     top:33%;
@@ -46,6 +58,7 @@
 }
 
     .logoname{
+      display: flex;
       letter-spacing: 1.5rem;
       font-size: 50px;
       color: aliceblue;
@@ -61,11 +74,10 @@
   }
 .labels{
   display: flex;
-  font-size: 27px;
+  font-size: 19px;
   margin-bottom: 7px;
   letter-spacing: normal;
   color:rgb(11, 11, 11);
-  font-size: 18px;
 }
  
 .signUpDetails input{
@@ -92,8 +104,8 @@
     font-weight: 400;
   }
   img{
-    width: 50vw;
-    height: 100vh;
+    width: 50%;
+    height: 100%;
   }
   .logo{
     opacity: 1; 
@@ -132,13 +144,10 @@ font-size:17px;
 .container{
     margin-right:20px;
 }
-.info{
-    margin: auto;
-    width: 400px;
-}
+
 .resetTab{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     display: grid;
 }
 .logoContainer{
@@ -148,35 +157,129 @@ font-size:17px;
   color: black;
   width: 425px;
   font-size: 30px;
+  display: grid;
+  place-items: center;
   letter-spacing: .4rem;
   background-color: var(--frame-background);
 }
-.note{
-    margin: 30px;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 0.2em;
-}
 
 .info input{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding-left: 30px;
+  margin-bottom: 32px;
+  margin-top: 20px;
+  font-size: 16px;
+  width: 92%;
+}
+/* checking */
+.imageContainer{
+  height: 100vh;
+}
+.signIn_details {
+  text-align: left;
+  margin: 10%;
+}
+.signIn_details h3{
+  font-weight: 700px;
+  font-size: 37px;
+  color: var(--orange)
+
+}
+.signIn_details input{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding-left: 30px;
+  margin-bottom: 32px;
+  height: 30px;
+  width: 92%;
+
+}
+
+.signIn_details p{
+  font-size: 16px;
+  font-weight: 400;
+}
+header{
+  text-align: center;
+}
+.logoAbsolute{
+position:absolute;
+top: 50vh;
+margin-left: 20vw;
+width: 312px;
+}
+
+.logoname{
+  display: flex;
+  letter-spacing: 1.5rem;
+  font-size:50px;
+  color: aliceblue;
+  margin-left: 20px;
+  font-weight: 100;
+}
+
+.loginDetails input{
     border-top: none;
     border-left: none;
     border-right: none;
     padding-left: 30px;
-    margin-bottom: 32px;
-    margin-top: 20px;
-    font-size: 16px;
+    margin-bottom: 22px;
+    font-size: 17px;
+    height: 50px;
+    margin-top: 10px;
     width: 92%;
   }
 
-.gear{
-    border: 2px solid red;
-    color:#FF6C2D;
-    width: 550px;
-    height: 600px;
-    position: absolute;
-    top: -25.36%;
-    left:-20.61%;
+.logomake{
+  padding-left: 170px;
+  margin-top: 33px;
+}
 
+.loginDetails{
+  margin-top: 64px;
+}
+
+
+.signIn{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100vh;
+}
+
+button .sign_up {
+  background: #FF6C2D;
+  border: none;
+  height: 40px;
+  width: 359px;
+  font-size: 20px;
+  color: aliceblue;
+  box-shadow: 4.800143241882324px 8.800263404846191px 10.400311470031738px -8.800263404846191px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  margin-top: 23px;
+}
+
+ .sign_in {
+  width: 92%;
+  margin-left: 10px;
+  margin-bottom: 54px;
+}
+.signupOption{
+  text-align: center;
+}
+
+ span{
+  color: var(--orange);
+  font-weight: bold;
+}
+.icon{
+width: 50px;
+height: 50px;
+margin-right: 5px;
+
+}
+ .faceBook{
+ color: #1877F2;
 }

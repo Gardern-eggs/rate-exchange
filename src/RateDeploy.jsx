@@ -1,5 +1,5 @@
 import React from 'react'
-import Rate from './Rate'
+// import Rate from './Rate'
 import {CgArrowsExchangeAlt} from 'react-icons/cg'
 import './index.css';
 import { useState ,useEffect} from 'react'
