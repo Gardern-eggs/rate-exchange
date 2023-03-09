@@ -27,7 +27,7 @@ function App() {
         </div>
       </div>
       <div className='imageContainer'>
-        <img className='amalitech'src={color}/>
+        <img alt='background' className='amalitech'src={color}/>
         <div className='logoSign'>
                 <label className='logoname'>AMALIT<div className='signupLogo'></div>CH</label>
                 <p className='logotext'>Currency Converter</p>
