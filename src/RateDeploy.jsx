@@ -13,7 +13,7 @@ function RateDeploy() {
     // const [amount2, setAmount2]=useState();
     const [from, setFrom]=useState("USD");
     const [to, setTo]=useState("EUR");
-    const [options, setOptions] = useState([]);
+    // const [options, setOptions] = useState([]);
     const [rates,setRates]=useState([])
      const url=`https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${from}.json`
       useEffect(()=>{
@@ -21,7 +21,7 @@ function RateDeploy() {
         .then(response =>{
           setRates(response.data[from])
         })
-      }, [from])
+      }, [])
 // Calling the convert function whenever
 // a user switches the currency
       // useEffect(()=>{
