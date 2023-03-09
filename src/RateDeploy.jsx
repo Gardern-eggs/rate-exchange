@@ -13,9 +13,9 @@ function RateDeploy() {
     // const [amount2, setAmount2]=useState();
     const [from, setFrom]=useState("USD");
     const [to, setTo]=useState("EUR");
-    // const [options, setOptions] = useState([]);
+    const [options, setOptions] = useState([]);
     const [rates,setRates]=useState([])
-     const url=` https://v6.exchangerate-api.com/v6/b674eba9fac2f388e6a4c505/latest/USD`
+     const url=`https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${from}.json`
       useEffect(()=>{
         axios.get(url)
         .then(response =>{
