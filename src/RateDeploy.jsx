@@ -1,20 +1,21 @@
 import React from 'react'
-// import Rate from './Rate'
 import {CgArrowsExchangeAlt} from 'react-icons/cg'
 import './index.css';
 import { useState ,useEffect} from 'react'
 import RateCalculate from './RateCalculate';
 import axios from 'axios'
-import { object } from 'prop-types';
+// import { object } from 'prop-types';
 
 function RateDeploy() {
-    const [amount1, setAmount1]=useState();
-    const [amount2, setAmount2]=useState();
+    const [amount1]=useState();
+    // const [amount1, setAmount1]=useState();
+    const [amount2]=useState();
+    // const [amount2, setAmount2]=useState();
     const [from, setFrom]=useState("USD");
     const [to, setTo]=useState("EUR");
-    const [options, setOptions] = useState([]);
+    // const [options, setOptions] = useState([]);
     const [rates,setRates]=useState([])
-     const url=`https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${from}.json`
+     const url=` https://v6.exchangerate-api.com/v6/b674eba9fac2f388e6a4c505/latest/USD`
       useEffect(()=>{
         axios.get(url)
         .then(response =>{
@@ -23,10 +24,10 @@ function RateDeploy() {
       }, [from])
 // Calling the convert function whenever
 // a user switches the currency
-      useEffect(()=>{
-        setOptions(Object.keys(rates));
-        // convert();
-      },[rates])
+      // useEffect(()=>{
+      //   setOptions(Object.keys(rates));
+      //   // convert();
+      // },[rates])
 
 //       // Function to convert the currency
 // function convert() {

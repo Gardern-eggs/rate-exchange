@@ -9,7 +9,7 @@ function Signup() {
  return (
     <div className="signUp">
         <div className='imageContainer'>
-            <img className='amalitech'src={color}/>
+            <img alt='background' className='amalitech'src={color}/>
             <div className='logoSign'>
             <Link to='/' className='link'>
                 <label className='logoname'>AMALIT<div className='signupLogo'></div>CH</label>

@@ -8,9 +8,9 @@ function RateCalculate(props) {
     <div exchangeCalculate>             
 <input type='number' className='from' value={props.amount}/> 
     <select className='dropdown' value={props.currency}>
-        {props.currencies.map((currency =>{
+        {/* {props.currencies.map((currency =>{
             <option value={currency}>{currency}</option>
-        }))}
+        }))} */}
     </select>
  
     </div>

@@ -4,9 +4,9 @@ import {BsGlobe} from 'react-icons/bs'
 import './Rate.css'
 import { FaFacebook ,FaTwitter } from 'react-icons/fa';
 import color from './color.png'
-import RateCalculate from './RateCalculate'
+// import RateCalculate from './RateCalculate'
 import RateDeploy from './RateDeploy'
-import Signup from './Signup';
+// import Signup from './Signup';
 
 
 function Rate() {
@@ -40,7 +40,7 @@ function Rate() {
         </div>
     {/*end of header  */}
         <div className='homePage'>
-            <img  className='backImg' src={color}/>
+            <img alt='background'  className='backImg' src={color}/>
 
             <div className='exchange' >
                 <div className='exchangeDetails'>
