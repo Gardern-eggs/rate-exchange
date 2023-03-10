@@ -1,9 +1,11 @@
 import React from 'react'
 import './search.css'
-import { BsSearch } from 'react-icons/bs'
+// import { BsSearch } from 'react-icons/bs'
 import color from './color.png'
 // import App from './App'
 import { FaFacebook ,FaTwitter } from 'react-icons/fa';
+
+
 function Search() {
   return (
 <div className='start'>
