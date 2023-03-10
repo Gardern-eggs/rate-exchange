@@ -24,6 +24,7 @@ text-decoration: none;
     display: flex;
     /* justify-content: space-between; */
     align-items: center;
+    background-color: var(--frame-background);
 }
 
 .container{
@@ -43,11 +44,47 @@ img{
     list-style: none;
 }
 
-.more li{
-    display: inline-grid;
+/* popover feature */
+details[data-popover] {
+    display: inline;
+    position: relative;
+    
+  }
+  details[data-popover] > summary:focus {
+    outline: none;
+  }
+
+  details[data-popover] > summary + * {
+    position: absolute;
+    display: block;
+    z-index: 1;
+    width: 200%;
+    border:none;
+    border-radius: 10px;
+    padding: 20px;
+    background: var(--frame-background);
+  }
+ 
+
+  /* details[data-popover] > * + * { */
+    /* hide detail elements that would ruin the popover */
+    /* display: none;
+  } */
+  details[data-popover="down"] > summary + * {
+    top: calc(0.5rem + 100%);
+    right: 50%;   
+    box-shadow: 14.800143241882324px 18.800263404846191px 10.400311470031738px -8.800263404846191px rgba(0, 0, 0, 0.25);
+    font-size: large;
+    line-height: 30px;
+    transform: translateX(50%);
+  }
+  details[data-popover] > summary {
+    list-style: none;
     margin-right: 60px;
-    font-size: 17px;
-}
+    box-shadow:#2FE900;
+  }
+
+
 
 .more{
     margin-left: 200px;
@@ -74,7 +111,7 @@ img{
     place-content: center;
     width: 103px;
     font-size: 17px;
-    background-color: #ffff;
+    background-color:var(--frame-background);
     color: black;
     box-shadow: none;
 }

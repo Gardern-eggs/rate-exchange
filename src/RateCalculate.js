@@ -1,9 +1,29 @@
 import React from 'react'
 import PropTypes  from 'prop-types'
 import './index.css';
+import axios from 'axios'
+import { useState ,useEffect} from 'react'
+
+
+const url=`https://v6.exchangerate-api.com/v6/b674eba9fac2f388e6a4c505/latest/USD`
 
 
 function RateCalculate(props) {
+
+  const [rates,setRates]=useState([])
+
+      ////////////
+      useEffect(()=>{ 
+   
+        axios.get(url).then((response)=>{
+            const rates = response.data
+            setRates(rates)
+     
+        }).catch((err)=>console.log(err))
+    console.log(rates)
+     
+      }, []) 
+
   return (
     <div exchangeCalculate>             
 <input type='number' className='from' value={props.amount}/> 
@@ -17,11 +37,11 @@ function RateCalculate(props) {
   )
 }
 
-RateCalculate.propTypes ={
-    amount:PropTypes.number.isRequired,
-    currency: PropTypes.string.isRequired,
-    currencies:PropTypes.array,
+// RateCalculate.propTypes ={
+//     amount:PropTypes.number.isRequired,
+//     currency: PropTypes.string.isRequired,
+//     currencies:PropTypes.array,
    
-   }
+//    }
 
 export default RateCalculate

@@ -1,4 +1,5 @@
 import React from 'react';
+// import RateDeploy from './RateDeploy';
 import ReactDOM from 'react-dom/client';
 // import App from './App';
 //  import index from './index.css'

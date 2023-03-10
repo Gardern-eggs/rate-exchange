@@ -7,11 +7,12 @@ import color from './color.png'
 // import RateCalculate from './RateCalculate'
 import RateDeploy from './RateDeploy'
 // import Signup from './Signup';
-
+import { CgNotifications } from 'react-icons/cg';
+import { BsBell} from 'react-icons/bs';
 
 function Rate() {
     const [date, setDate] = useState ();
-   
+
 
   return (
     <>
@@ -25,9 +26,30 @@ function Rate() {
                 </div>
                 <div className='more'>
                     <ul>
-                        <li>Tools</li>
-                        <li>Exchange Rate Api</li>
-                        <li>Resource</li>
+                    <details data-popover="down">
+                       <summary>Tools</summary>
+                       <div>
+                       <p>Currency Converter </p>
+                        <p>Historical Currency Rates</p>
+                        <p>Rate Alert </p>
+                        </div>
+                    </details>
+
+                    <details data-popover="down">
+                    <summary>Exhange Rate Api</summary>
+                        <div>
+                        <p><BsBell/> API </p>
+                        </div>
+                    </details>
+                    <details data-popover="down">
+                    <summary>Resources</summary>
+                        <div>
+                        <Link to='/Search' className='link'><p><BsGlobe/> Help Center </p></Link>
+                            <p><div></div>Currency Newsletter</p>
+                            <p><div></div>More</p>
+                        </div>
+                    </details>
+                   
                     </ul>
                 </div>   
                 <div className='language'>
