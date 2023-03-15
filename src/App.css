@@ -325,3 +325,24 @@ margin-right: 5px;
  .faceBook{
  color: #1877F2;
 }
+
+  @media (max-width:420px) {
+
+    /* signin edits */
+    .imageContainer{
+      display: none;
+    }
+    .signIn{
+     display: grid;
+     grid-template-columns:none;
+      margin-top:89px ;
+     /* width: 100%; */
+    }
+      .signUp{
+       display: grid;
+       grid-template-columns: none;
+        margin-top: 100px;
+      }
+     }
+
+  

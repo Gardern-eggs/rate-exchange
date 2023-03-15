@@ -139,5 +139,11 @@ place-content: center;
 
 
 @media (max-width:420px) {
-
+  .gear{
+    top:-288px;
+    left:-315px;
+  }
+  .info{
+    margin-top: 105px;
+  }
 }
