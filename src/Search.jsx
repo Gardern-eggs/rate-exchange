@@ -1,6 +1,6 @@
 import React from 'react'
 import './search.css'
-import { useState,/*useEffect*/ } from 'react';
+// import { useState,/*useEffect*/ } from 'react';
 // import { BsSearch } from 'react-icons/bs'
 import color from './color.png'
 // import axios from 'axios';
