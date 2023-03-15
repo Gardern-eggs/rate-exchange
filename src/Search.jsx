@@ -1,13 +1,13 @@
 import React from 'react'
 import './search.css'
-import { useState,useEffect } from 'react';
+import { useState,/*useEffect*/ } from 'react';
 // import { BsSearch } from 'react-icons/bs'
 import color from './color.png'
-import axios from 'axios';
+// import axios from 'axios';
 // import App from './App'
 import { FaFacebook ,FaTwitter } from 'react-icons/fa';
 
-const url = 'https://restcountries.com/v2/all';
+// const url = 'https://restcountries.com/v2/all';
 
 
 function Search() {
@@ -23,7 +23,7 @@ function Search() {
   //   .catch((err)=>console.log(err))
 
   // }, []) 
-  const [search,setSearch]=useState('')
+  // const [search,setSearch]=useState('')
 
   return (
 <div className='start'>
@@ -32,7 +32,7 @@ function Search() {
         <div className='exchange'>
           <div className='SearchContent'>
             <h4> How Can We help you?</h4>
-            <input type='search' placeholder='Search Country '  onChange={(e)=>{setSearch(e.target.value)}}></input>
+            <input type='search' placeholder='Search Country ' /* onChange={(e)=>{setSearch(e.target.value)}}*/></input>
             {/* <div className='display'>
             {/* filter component to search for countries */}
             {/* {countries
