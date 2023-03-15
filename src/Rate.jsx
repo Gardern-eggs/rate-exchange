@@ -1,17 +1,91 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
+import axios from 'axios';
+import {CgArrowsExchangeAlt} from 'react-icons/cg'
+import './index.css';
 import { Link} from 'react-router-dom';
 import {BsGlobe} from 'react-icons/bs'
 import './Rate.css'
+import PropTypes  from 'prop-types'
 import { FaFacebook ,FaTwitter } from 'react-icons/fa';
 import color from './color.png'
-// import RateCalculate from './RateCalculate'
-import RateDeploy from './RateDeploy'
+import RateCalculate from './RateCalculate'
+// import RateDeploy from './RateDeploy'
 // import Signup from './Signup';
 import { CgNotifications } from 'react-icons/cg';
 import { BsBell} from 'react-icons/bs';
+// const url=`https://v6.exchangerate-api.com/v6/b674eba9fac2f388e6a4c505/latest/USD`
 
-function Rate() {
-    const [date, setDate] = useState ();
+function Rate(props) {
+    // funtion to display date
+    let currentDate = new Date();
+    let clock=currentDate.toLocaleTimeString();
+    const [date, setDate] = useState (new Date());
+    // const [rate,setRate]=useState()
+
+    // let rates=props.arrayData
+    // api data fetch for currency
+    // useEffect(()=>{ 
+   
+    //     axios.get(url).then((response)=>{
+    //         const rate = response.data
+    //         setRate(rate)
+    //         console.log(rate)
+    //     })
+    //     .catch((err)=>console.log(err))
+    
+    //   }, []) 
+
+    const [amount1, setAmount1]=useState(1);
+    const [amount2, setAmount2]=useState(1);
+    const [from, setFrom]=useState("USD");
+    const [to, setTo]=useState("EUR");
+    const [currency1, setCurrency1] = useState('usd');
+    const [currency2, setCurrency2] = useState('usd');
+
+    // const [rates,setRates]=useState([])
+
+
+// Calling the convert function whenever
+// a user switches the currency
+      // useEffect(()=>{
+      //   setOptions(Object.keys(rates));
+      //   // convert();
+      // },[rates])
+
+//       // Function to convert the currency
+// function convert() {
+// 	var rate = rates[to];
+// 	setAmount2(amount1 * rate);
+// }
+
+ // Function to switch between two currency
+ function flip() {
+	var temp = {setAmount1};
+	setFrom({setAmount2});
+	setTo(temp);
+}
+
+// function to calculate rate
+      function handleCurrency1Change(currency1){
+        setAmount2(amount1*4/*[currency2]*//2/*[currency1]*/);
+        setCurrency1(currency1);
+      }
+
+      function handleCurrency2Change(currency2){
+        setAmount1(  amount2 *4/*[currency1]*//2/*[currency2]*/);
+        setCurrency2(currency2);
+      }
+
+      function handleAmount1Change(amount1){
+        setAmount2(amount1*4/*[currency2]*//2/*[currency1]*/);
+        setAmount1(amount1);
+      }
+      
+      function handleAmount2Change(amount2){
+        setAmount1(amount2*4/*[currency1]*//2/*[currency2]*/);
+        setAmount2(amount2);
+      }
+
 
 
   return (
@@ -53,7 +127,7 @@ function Rate() {
                     </ul>
                 </div>   
                 <div className='language'>
-                    <Link to='App' className='link'>  <div className='sign'>Sign in</div></Link> 
+                    <Link to='App' className='link'>  <div id='sign'>Sign in</div></Link> 
                       <Link to='/SignUp' className='link'>
                         <button className='btnRegister'>Register</button>
                       </Link> 
@@ -62,25 +136,51 @@ function Rate() {
         </div>
     {/*end of header  */}
         <div className='homePage'>
-            <img alt='background'  className='backImg' src={color}/>
+            <img alt='background'  className='backImage' src={color}/>
 
-            <div className='exchange' >
+            <div className='exchang' >
                 <div className='exchangeDetails'>
                     <div className='exchangeTitle'>    
                         <h3>Ghana Cedi to Us Dollor </h3>
-                        <p>Convert GHS to USD</p>
-                        <h5>1 GHS = 0.09 USD</h5>
+                        <p>Convert {currency1} to {currency2}</p>
+                        <h5>1 {currency1} = 0.09 {currency2}</h5>
                     </div>
                     <div className='exchangeInput'>
-                       <RateDeploy  />
+                       {/* <RateDeploy /> */}
+        <RateCalculate className='from'
+          // currencies={Object.keys(rates)}
+          // onChange={(e) => { setTo(e.value) }}
+          // value={to} 
+          // amount={amount1} 
+          onAmountChange={handleAmount1Change}
+          onCurrencyChange={handleCurrency1Change}
+            currencies={['usd','usd','ghs','togo','usd','usd','ghs','togo',"GBP","BHD","AUD","AMD","ARS","XCD","AOA","EUR","USD","DZD","AFG","AFN","EUR","ALL"]}
+            amount={amount1}
+            currency={currency1}
+        />
+        
+          <CgArrowsExchangeAlt className='flipicon' onClick={() => { flip()}}/>
+
+        <RateCalculate className='to'
+            onAmountChange={handleAmount2Change}
+            onCurrencyChange={handleCurrency2Change}
+          // currencies={Object.keys(rates)} 
+          // onChange={(e) => { setFrom(e.value) }}
+          // amount={amount2} 
+          // value={from}
+            currencies={['usd','ghs','togo','usd','usd','ghs','togo',"GBP","BHD","AUD","AMD","ARS","XCD","AOA","EUR","USD","DZD","AFG","AFN","EUR","ALL"]} 
+            amount={amount2}
+            currency={currency2}
+        />
+    
                     </div>  <br/>  
                     <div className='calender'>
-                        <p>Mid-market exchange rate at 12:30 UTC</p>
+                        <p>Mid-market exchange rate at {clock}</p>
                         <input
                             className='date'
                             type="date"
-                            value={date}
-                            onChange={(e) => setDate(e.target.value)}
+                            value={date.toISOString().substr(0, 10)}
+                            onChange={(e) => setDate(new Date(e.target.value))}
                         />
                     </div>
                 </div>
@@ -88,8 +188,8 @@ function Rate() {
             <div className='ratelist'>
                 <div className='rateFrom'>
                     <div className='fromHead'>
-                      <h3>Convert GHS to USD</h3> 
-                     <h5>💢 GHS 💢USD</h5>   
+                      <h3>Convert {currency1} to {currency2}</h3> 
+                     <h5>💢 {currency1} 💢{currency2}</h5>   
                     </div>
                     <div className='fromBody'>
                     <div className='fromHolder'>1 USD</div>  
@@ -111,10 +211,10 @@ function Rate() {
                 </div>
                 <div className='rateTo'>
                     <div className='toHead'>
-                    <h3>Convert GHS to USD</h3> 
+                    <h3>Convert {currency2} to {currency1}</h3> 
                         <div className='fromBodyHead'>
-                            <div className='toHolder'>💢 USD</div>
-                            <div className='fromHolder'>💢 GHS</div>
+                            <div className='toHolder'>💢 {currency2}</div>
+                            <div className='fromHolder'>💢 {currency1}</div>
                         </div>
                     </div>
                     <div className='toBody'>
@@ -142,7 +242,7 @@ function Rate() {
                 <div className='rateFrominfo'>
                     <div className='fromBodyinfo'>
                         <div className='title'>
-                            <h3>🏁 GHS</h3>
+                            <h3>🏁 {currency1}</h3>
                         </div><br/>
                       <div className='fromHolder'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam adipisci corrupti velit amet in, nulla aspernatur ipsa a modi consequatur odio quae facere possimus illum? Enim sapiente nihil quibusdam reiciendis.</div>  
                     </div>
@@ -151,7 +251,7 @@ function Rate() {
                 <div className='rateToinfo'>
                     <div className='toBodyinfo'>
                         <div className='title'>
-                            <h3>🏁 USD</h3>
+                            <h3>🏁 {currency2}</h3>
                         </div><br/>
                         <div className='toHolder'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure molestias eos beatae aliquid consectetur, et quas earum repudiandae laudantium error dolorum, quos, quo tempore suscipit fugiat a. Porro, repudiandae laborum.</div>  
                     </div>
@@ -194,7 +294,14 @@ function Rate() {
     </>
   )
 }
-
+Rate.propTypes ={
+    amount:PropTypes.number.isRequired,
+    currency: PropTypes.string.isRequired,
+    currencies:PropTypes.array,
+    // onAmountChange:PropTypes.func,
+    // onCurrencyChange:PropTypes.func,
+   
+   }
 
 
 export default Rate

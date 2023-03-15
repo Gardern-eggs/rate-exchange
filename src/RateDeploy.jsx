@@ -7,14 +7,14 @@ import RateCalculate from './RateCalculate';
 
 
 function RateDeploy() {
-    // const [amount1]=useState();
-    const [amount1, setAmount1]=useState();
-    // const [amount2]=useState();
-    const [amount2, setAmount2]=useState();
+    const [amount1, setAmount1]=useState(1);
+    const [amount2, setAmount2]=useState(1);
     const [from, setFrom]=useState("USD");
     const [to, setTo]=useState("EUR");
-    // const [options, setOptions] = useState([]);
-    const [rates,setRates]=useState([])
+    const [currency1, setCurrency1] = useState('usd');
+    const [currency2, setCurrency2] = useState('usd');
+
+    // const [rates,setRates]=useState([])
 
 
 // Calling the convert function whenever
@@ -32,27 +32,58 @@ function RateDeploy() {
 
  // Function to switch between two currency
  function flip() {
-	var temp = from;
-	setFrom(to);
+	var temp = {setAmount1};
+	setFrom({setAmount2});
 	setTo(temp);
 }
 
+// function to calculate rate
+      function handleCurrency1Change(currency1){
+        setAmount2(amount1*4/*[currency2]*//2/*[currency1]*/);
+        setCurrency1(currency1);
+      }
+
+      function handleCurrency2Change(currency2){
+        setAmount1(  amount2 *4/*[currency1]*//2/*[currency2]*/);
+        setCurrency2(currency2);
+      }
+
+      function handleAmount1Change(amount1){
+        setAmount2(amount1*4/*[currency2]*//2/*[currency1]*/);
+        setAmount1(amount1);
+      }
+      
+      function handleAmount2Change(amount2){
+        setAmount1(amount2*4/*[currency1]*//2/*[currency2]*/);
+        setAmount2(amount2);
+      }
+        
     return (
     <div className='exchangeInput'>    
         <RateCalculate className='from'
-          currencies={Object.keys(rates)}
-          onChange={(e) => { setTo(e.value) }}
-          value={to} 
-          amount={amount1} 
+          // currencies={Object.keys(rates)}
+          // onChange={(e) => { setTo(e.value) }}
+          // value={to} 
+          // amount={amount1} 
+          onAmountChange={handleAmount1Change}
+          onCurrencyChange={handleCurrency1Change}
+            currencies={['usd','usd','ghs','togo','usd','usd','ghs','togo',"GBP","BHD","AUD","AMD","ARS","XCD","AOA","EUR","USD","DZD","AFG","AFN","EUR","ALL"]}
+            amount={amount1}
+            currency={currency1}
         />
         
           <CgArrowsExchangeAlt className='flipicon' onClick={() => { flip()}}/>
 
         <RateCalculate className='to'
-          currencies={Object.keys(rates)} 
-          onChange={(e) => { setFrom(e.value) }}
-          amount={amount2} 
-          value={from}
+            onAmountChange={handleAmount2Change}
+            onCurrencyChange={handleCurrency2Change}
+          // currencies={Object.keys(rates)} 
+          // onChange={(e) => { setFrom(e.value) }}
+          // amount={amount2} 
+          // value={from}
+            currencies={['usd','ghs','togo','usd','usd','ghs','togo',"GBP","BHD","AUD","AMD","ARS","XCD","AOA","EUR","USD","DZD","AFG","AFN","EUR","ALL"]} 
+            amount={amount2}
+            currency={currency2}
         />
     
     </div>

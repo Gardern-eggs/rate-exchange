@@ -136,3 +136,8 @@ place-content: center;
   top:33%;
   border-radius: 40px;
 }
+
+
+@media (max-width:420px) {
+
+}

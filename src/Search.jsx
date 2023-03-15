@@ -1,12 +1,30 @@
 import React from 'react'
 import './search.css'
+import { useState,useEffect } from 'react';
 // import { BsSearch } from 'react-icons/bs'
 import color from './color.png'
+import axios from 'axios';
 // import App from './App'
 import { FaFacebook ,FaTwitter } from 'react-icons/fa';
 
+const url = 'https://restcountries.com/v2/all';
+
 
 function Search() {
+
+  const [countries,setCountries]=useState([])
+  useEffect(()=>{ 
+   
+    axios.get(url).then((response)=>{
+        const countries = response.data
+        setCountries(countries)
+        console.log(countries)
+    })
+    .catch((err)=>console.log(err))
+
+  }, []) 
+  const [search,setSearch]=useState('')
+
   return (
 <div className='start'>
       <div className='pageStart'>
@@ -14,7 +32,44 @@ function Search() {
         <div className='exchange'>
           <div className='SearchContent'>
             <h4> How Can We help you?</h4>
-            <input type='search' placeholder='Search Country '></input>
+            <input type='search' placeholder='Search Country '  onChange={(e)=>{setSearch(e.target.value)}}></input>
+            {/* <div className='display'>
+            {/* filter component to search for countries */}
+            {/* {countries
+           // eslint-disable-next-line
+            // .filter((val)=>{
+            // if(search === ''){
+            //    return val
+               
+            // }else if(val.name.toLowerCase().includes(search.toLocaleLowerCase())){
+            //   return val
+
+            // }          
+
+                // }) .map((country)=>{
+                  //data requested to complete project
+                              // const { numericCode,flag,name,alpha3Code,currencies,code }= country
+              
+                  //to display pulled data request
+                              return(
+                              // <article key={numericCode}> 
+                                  // <div className='countryBox '>
+                                         
+                                     {/* <div className='img-container'>
+                                          <img src={flag} alt='Country flag'/>
+                                      </div> */}
+                                     
+                                     {/* <div className='countryBoxDetail'>
+                                     <h3 className='countryName'> {name}</h3>
+                                     <h3 className='countryName'>  {currencies[0].name}</h3>
+                                          
+                                     </div> 
+                                  </div>
+                              </article>
+                              )
+                          
+                          })} */}
+                      {/* </div> */} 
             <p>Sign in to get in touch</p>
             <button className='	signs'>Sign In</button>
           </div>

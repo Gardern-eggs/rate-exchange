@@ -19,17 +19,14 @@ text-decoration: none;
 
 .head{
     width: 100%;
-    /* border: 2px solid red; */
     height: 85px;
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
     background-color: var(--frame-background);
 }
 
 .container{
     display: flex;
-    border: 2px solid red;
 }
 .RatelogoContainer{
     padding-left: 10%;
@@ -106,7 +103,7 @@ details[data-popover] {
     color: aliceblue;
     border-radius: 10px;
 }
-.language .sign{
+.language .sign,#sign{
     display: flex;
     place-content: center;
     width: 103px;
@@ -128,7 +125,7 @@ details[data-popover] {
     background-color: var(--frame-background);
 }
 
-.backImg{
+.backImage{
     position: absolute;
     width: 100%;
     height: 331.16px;
@@ -138,7 +135,7 @@ details[data-popover] {
     border-radius:0px 0px 200px 400px ;
 }
 
-.exchange{
+.exchang{
     width: 1176px;
     height: 381px;
     background-color: rgba(255,108,45,0.6);
@@ -190,10 +187,6 @@ select{
     background-color: rgba(241, 154, 117, 0);
 }
 
-.date{
-    border: 0px;
-    font-size: 24px;
-}
 
 .ratelist{
     display: grid;
@@ -230,6 +223,8 @@ select{
 .date{
     width: 369px;
     height: 52px;
+    border: 0px;
+    font-size: 24px;
     border-radius: 10px;
 }
 
@@ -314,7 +309,6 @@ select{
 
 .foot{
     width: 100%;
-    height: 441px;
     background-color: var(--army);
 }
 
@@ -352,7 +346,7 @@ margin-top:-170px;
 
 label{
     display: flex;
-    gap: 5px;    
+    /* gap: 5px;     */
     letter-spacing: .4rem;
     font-size: 27px;
     color:rgba(174, 174, 174, 1);
@@ -399,4 +393,124 @@ label{
     top:33%;
     border-radius: 40px;
 }
+    @media (max-width:420px) {
+        
+        .eDesign{
+            width:11px;
+            height: 4px;
+            margin-left: -6px;
+            margin-top: 5px;
+            border:3px solid #FF6C2D;
+            border-right: none;
+            border-left: none;
+            border-top-left-radius:1px ;  
+            border-top-right-radius:1px;
+            border-bottom-left-radius:1px ;
+            border-bottom-right-radius:1px ;
+            
+        }
+        .eDesign::after{
+            width: 11px;
+            height: 2.7px;
+            background-color: #FF6C2D;
+            width:99.5%;
+            top:23%;
+            border-radius: 1px;
+        }
+      
 
+        .logotexts{
+            width: 34px;
+            font-size: 3px;
+            letter-spacing: .2rem;
+        }
+        .RatelogoContainer{
+            padding-left: 5%;
+        }
+        .more{
+           display: none;
+        }
+        .language .sign{
+            margin-left: 84px;
+        }
+        #sign ,.btnRegister{
+            display: none;
+        }
+        .backImage{
+          height:144px ;
+        }
+        .exchang{
+            width: 335px;
+            /* place-items: start; */
+
+        }
+        
+        .exchangeTitle h3{
+            font-size: 24px;    
+        }
+        
+        .exchangeTitle h5{
+            font-size: 24px;
+        }
+        
+        .exchangeInput {
+            display: flex;
+            flex-direction: column;
+
+            /* width: 304px;;
+            height: 54px; */
+        }
+        
+     
+        
+        .flipicon{
+            rotate: 90deg;
+            margin-left: 40%;
+        }
+        .from,.to{
+            width: 250px;
+            height: 51px;
+            font-size:24px;
+        }
+        select{
+            height: 51px;
+            padding-top: 7px;
+
+        }
+        .ratelist{
+            display: block;
+        }
+        .rateFrom{
+            width: 381px;
+            margin-right: 0px;
+        }
+        .fromHead{
+            width:381px;
+            border-radius: 10px;
+        }
+        .date{
+            width: 250px;
+            height: 51px;
+            font-size: 19px;
+        }
+        
+        .rateTo{
+            display: none;
+        }
+        .rateFrominfo,.rateToinfo{
+            width: 335px;
+        }
+        .rateToinfo{
+            margin-left: 0px;
+        }
+        .fromBodyinfo{
+            margin: 25px 30px 32px 29px;
+        }
+        .toBodyinfo{
+            margin: 25px 30px 32px 29px;
+
+        }
+        .toHolde{
+            width: 243px;
+        }
+    }
