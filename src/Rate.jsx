@@ -162,7 +162,7 @@ function Rate(props) {
 
         />
         
-          <CgArrowsExchangeAlt className='flipicon' onClick={() => { flip()}}/>
+          <CgArrowsExchangeAlt className='flipicon' /*onClick={() => { flip()}}*//>
 
         <RateCalculate className='to'
             onAmountChange={handleAmount2Change}
