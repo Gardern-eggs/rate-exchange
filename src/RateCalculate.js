@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes  from 'prop-types'
 import './index.css';
-import axios from 'axios'
-import { useState ,useEffect} from 'react'
+// import axios from 'axios'
+// import { useState ,useEffect} from 'react'
 
 
 // const url=`https://v6.exchangerate-api.com/v6/b674eba9fac2f388e6a4c505/latest/USD`

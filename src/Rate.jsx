@@ -1,5 +1,5 @@
-import React,{useState,useEffect} from 'react'
-import axios from 'axios';
+import React,{useState,/*useEffec*/} from 'react'
+// import axios from 'axios';
 import {CgArrowsExchangeAlt} from 'react-icons/cg'
 import './index.css';
 import { Link} from 'react-router-dom';
@@ -11,7 +11,7 @@ import color from './color.png'
 import RateCalculate from './RateCalculate'
 // import RateDeploy from './RateDeploy'
 // import Signup from './Signup';
-import { CgNotifications } from 'react-icons/cg';
+// import { CgNotifications } from 'react-icons/cg';
 import { BsBell} from 'react-icons/bs';
 // const url=`https://v6.exchangerate-api.com/v6/b674eba9fac2f388e6a4c505/latest/USD`
 
@@ -37,8 +37,8 @@ function Rate(props) {
 
     const [amount1, setAmount1]=useState(1);
     const [amount2, setAmount2]=useState(1);
-    const [from, setFrom]=useState("USD");
-    const [to, setTo]=useState("EUR");
+    // const [from, setFrom]=useState("USD");
+    // const [to, setTo]=useState("EUR");
     const [currency1, setCurrency1] = useState('usd');
     const [currency2, setCurrency2] = useState('usd');
 
@@ -59,11 +59,11 @@ function Rate(props) {
 // }
 
  // Function to switch between two currency
- function flip() {
-	var temp = {setAmount1};
-	setFrom({setAmount2});
-	setTo(temp);
-}
+//  function flip() {
+// 	var temp = {setAmount1};
+// 	setFrom({setAmount2});
+// 	setTo(temp);
+// }
 
 // function to calculate rate
       function handleCurrency1Change(currency1:string):void{
@@ -156,7 +156,10 @@ function Rate(props) {
           onCurrencyChange={handleCurrency1Change}
             currencies={['usd','usd','ghs','togo','usd','usd','ghs','togo',"GBP","BHD","AUD","AMD","ARS","XCD","AOA","EUR","USD","DZD","AFG","AFN","EUR","ALL"]}
             amount={amount1}
+            // value={amount1}
             currency={currency1}
+            // onChange={flip}
+
         />
         
           <CgArrowsExchangeAlt className='flipicon' onClick={() => { flip()}}/>
@@ -170,7 +173,9 @@ function Rate(props) {
           // value={from}
             currencies={['usd','ghs','togo','usd','usd','ghs','togo',"GBP","BHD","AUD","AMD","ARS","XCD","AOA","EUR","USD","DZD","AFG","AFN","EUR","ALL"]} 
             amount={amount2}
+            // value={amount2}
             currency={currency2}
+            // onChange={flip}
         />
     
                     </div>  <br/>  

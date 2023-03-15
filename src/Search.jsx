@@ -12,17 +12,17 @@ const url = 'https://restcountries.com/v2/all';
 
 function Search() {
 
-  const [countries,setCountries]=useState([])
-  useEffect(()=>{ 
+  // const [countries,setCountries]=useState([])
+  // useEffect(()=>{ 
    
-    axios.get(url).then((response)=>{
-        const countries = response.data
-        setCountries(countries)
-        console.log(countries)
-    })
-    .catch((err)=>console.log(err))
+  //   axios.get(url).then((response)=>{
+  //       const countries = response.data
+  //       setCountries(countries)
+  //       console.log(countries)
+  //   })
+  //   .catch((err)=>console.log(err))
 
-  }, []) 
+  // }, []) 
   const [search,setSearch]=useState('')
 
   return (
