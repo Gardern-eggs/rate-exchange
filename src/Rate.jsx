@@ -66,22 +66,22 @@ function Rate(props) {
 }
 
 // function to calculate rate
-      function handleCurrency1Change(currency1){
+      function handleCurrency1Change(currency1:string):void{
         setAmount2(amount1*4/*[currency2]*//2/*[currency1]*/);
         setCurrency1(currency1);
       }
 
-      function handleCurrency2Change(currency2){
+      function handleCurrency2Change(currency2:string):void{
         setAmount1(  amount2 *4/*[currency1]*//2/*[currency2]*/);
         setCurrency2(currency2);
       }
 
-      function handleAmount1Change(amount1){
+      function handleAmount1Change(amount1: number):void{
         setAmount2(amount1*4/*[currency2]*//2/*[currency1]*/);
         setAmount1(amount1);
       }
       
-      function handleAmount2Change(amount2){
+      function handleAmount2Change(amount2: number):void{
         setAmount1(amount2*4/*[currency1]*//2/*[currency2]*/);
         setAmount2(amount2);
       }
